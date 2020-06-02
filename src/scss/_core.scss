@@ -1,0 +1,122 @@
+
+::placeholder
+{
+    color: silver;
+}
+
+*:focus
+{
+    outline: 0;
+}
+
+body, html
+{
+    margin: 0;
+    padding: 0;
+    background: whiteSmoke;
+    font-family: "Share Tech", "Noto Sans SC", sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    cursor: default;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+a,
+a:focus,
+a:hover {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+table, tr, th, td
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+input
+{
+    font: inherit;
+    height: 26px;
+    padding: 4px;
+    border: 1px solid silver;
+    box-sizing: border-box;
+}
+
+input:read-only
+{
+    color: gray;
+}
+
+input:disabled
+{
+    color: gray;
+    background-color: whitesmoke;
+    user-select: none;
+}
+
+//input[type=checkbox] {
+//    display: none;
+//}
+
+input::-ms-clear, input::-ms-reveal
+{
+    display: none;
+}
+
+select
+{
+    font: inherit;
+    height: 26px;
+    border: 1px solid silver;
+}
+
+textarea
+{
+    resize: none;
+    padding: 4px;
+    overflow: auto;
+    border: none;
+    white-space: pre;
+    word-wrap: normal;
+    font-family: "Share Tech Mono", "Noto Sans SC", monospace;
+    font-variant-ligatures: no-common-ligatures;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+button, .btn {
+    font: inherit;
+    // height: 26px;
+    margin: 0;
+    padding: 0 7px;
+    background-color: whiteSmoke;
+    border: 1px solid silver;
+    box-shadow: 0 0 0 transparent;
+    transition: color 500ms, background-color 500ms, border-color 500ms, box-shadow 500ms;
+}
+
+ button:hover:enabled, .btn:hover:enabled {
+     border-color: gray;
+     box-shadow: 0 0 3px gray;
+     transition: color 100ms, background-color 100ms, border-color 100ms, box-shadow 100ms;
+ }
+
+button:disabled, .btn:disabled {
+    color: gray;
+}

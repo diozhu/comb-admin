@@ -1,0 +1,290 @@
+//@import "font";
+@import "core";
+@import "icon";
+//@import "~normalize.css";
+
+.icon {
+    &.selected {
+        color: #e67c36;
+        text-shadow: 0 0 3px #e67c36;
+    }
+    &.blue {
+        color: SteelBlue;
+        text-shadow: 0 0 3px SteelBlue;
+    }
+    &.red {
+        color: #ee3131;
+        text-shadow: 0 0 3px #ee3131;
+    }
+    &.yellow {
+        color: #fbc600;
+        text-shadow: 0 0 3px #fbc600;
+    }
+    &.green {
+        color: darkgreen;
+        text-shadow: 0 0 3px darkgreen;
+    }
+    &.gray {
+        color: gray;
+        text-shadow: 0 0 3px gray;
+    }
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    //margin: 8px;
+    //.el-table {
+    //    max-height: 500px;
+    //    overflow: auto;
+    //}
+    .v-table .operations,
+    .p-table .operations {
+        padding: 6px 0;
+    }
+}
+.el-table .wrap .cell {
+    text-overflow: initial;
+}
+.el-checkbox__inner {
+    z-index: initial!important;
+    transition: initial!important;
+}
+.el-submenu__title,
+.el-menu-item {
+    .icon {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    span {
+        padding: 0 0 0 10px;
+    }
+}
+
+.v-modal {
+    z-index: 1500;
+}
+
+// fade-transform ...
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+    transition: all 300ms;
+}
+.fade-transform-enter {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+.fade-transform-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+}
+// slide-transform ...
+.slide-transform-leave-active,
+.slide-transform-enter-active {
+    transition: all 300ms ease-in-out;
+}
+.slide-transform-enter {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+.slide-transform-leave-to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+
+.p-panel,
+.details {
+    padding: 0 0 60px 0;
+
+    .el-collapse-item__header,
+    .el-collapse-item__wrap {
+        background: initial;
+    }
+
+    .detail-header {
+        height: 50px;
+        padding: 0 20px;
+        border-bottom: #0d263e 1px solid;
+        display: flex;
+        align-items: center;
+        p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 700;
+            color: #0d263e;
+        }
+    }
+
+    .detail-form,
+    .el-form {
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+
+        .el-collapse {
+            width: 100%;
+            border: 0;
+            .el-collapse-item__content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+
+        .el-form-item {
+            width: 30%;
+            margin: 3px;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            .el-form-item__label {
+                flex: 1 1 auto;
+            }
+            .icon {
+                margin: auto;
+            }
+            &.horizontal {
+                flex-direction: row;
+                margin: 5px 0;
+                .icon {
+                    padding: 0 10px 0 0;
+                }
+                &.reverse {
+                    flex-direction: row-reverse;
+                }
+            }
+            &.haf {
+                width: 45%
+            }
+            &.totally {
+                width: 98%
+            }
+        }
+        .el-form-item__label {
+            text-align: left;
+            line-height: 12px;
+        }
+        .el-form-item__content {
+            line-height: 12px;
+            display: flex;
+        }
+        .el-input,
+        .el-color-picker{
+            margin: 3px 2px 0 0;
+        }
+        .el-input__inner {
+            height: 22px;
+            line-height: 22px;
+            padding: 2px 3px;
+        }
+        .el-date-editor--datetime,
+        .el-date-editor--time {
+            .el-input__inner {
+                padding: 2px 3px 2px 30px;
+            }
+        }
+        .el-input__icon {
+            line-height: 22px;
+        }
+    }
+
+    .el-color-picker {
+        height: initial;
+        line-height: inherit;
+        margin-left: -6px !important;
+        .el-color-picker__mask {
+            display: none;
+        }
+        .el-color-picker__trigger {
+            width: 22px;
+            height: 22px;
+            padding: 0;
+        }
+    }
+    .v-table {
+        width: 100%;
+    }
+    .v-text {
+        margin: 6px 0;
+    }
+
+    .detail-properties {
+        width: 100%;
+
+        .v-text {
+            margin: 0;
+        }
+
+        .header,
+        .body {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            .key {
+                padding: 2px 5px;
+                width: 120px;
+                border: 1px solid #e4e4e4;
+            }
+            .val {
+                padding: 2px 5px;
+                flex: 1;
+                border: 1px solid #e4e4e4;
+                border-left: none;
+            }
+        }
+        .header {
+            background: #f4f4f4;
+        }
+        .body {
+            .key {
+                border-top: none;
+            }
+            .val {
+                border-top: none;
+            }
+        }
+        .operation {
+            width: 100px;
+            padding-left: 10px;
+            .icon-buttons-box {
+                display: flex;
+                .icon-button {
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #dcdfe6;
+                    margin-right: 10px;
+                    border-radius: 3px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #fff;
+                    i {
+                        font-size: 16px !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .v-table .operations,
+    .p-table .operations {
+        padding-right: 10px;
+    }
+}
+
+.p-panel,
+.details {
+    .detail-buttons {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 6px 10px;
+        text-align: right;
+    }
+    .is-helper-active {
+        right: 380px;
+    }
+}
